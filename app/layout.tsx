@@ -7,24 +7,20 @@ import '@/styles/themes.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nitin Ranganath | Portfolio',
-    template: 'Nitin Ranganath | %s',
+    default: 'Kunal | Portfolio',
+    template: 'Kunal | %s',
   },
   description:
-    "Nitin Ranganath is an avid full stack web developer building websites and applications you'd love to use",
+    "Kunal is an avid full stack web developer building websites and applications you'd love to use",
   keywords: [
-    'nitin ranganath',
-    'nitin',
-    'ranganath',
+    'kunal',
     'web developer portfolio',
-    'nitin web developer',
-    'nitin developer',
     'mern stack',
-    'nitin ranganath portfolio',
+    'kunal portfolio',
     'vscode-portfolio',
   ],
   openGraph: {
-    title: "Nitin Ranganath's Portfolio",
+    title: "Kunal's Portfolio",
     description:
       "A full-stack developer building websites that you'd like to use.",
     images: ['https://imgur.com/4zi5KkQ.png'],
