@@ -19,16 +19,17 @@ export default function HomePage() {
           <div className={styles.intro}>
             <p className={styles.greeting}>Hello, I&apos;m</p>
             
-            <h1 className={styles.name}>Nitin Ranganath</h1>
+            <h1 className={styles.name}>Kunal Jaiswal</h1>
             
-            <p className={styles.role}>Full Stack Developer</p>
+            <p className={styles.role}>React Developer & Full Stack Engineer</p>
             
             <div className={styles.divider} />
             
             <p className={styles.description}>
-              I craft clean, performant web applications with modern technologies. 
-              Specialized in TypeScript, React, Node.js, and building products 
-              that users love.
+              I build interactive and responsive web applications with React.js, Next.js, 
+              and modern technologies. Specialized in creating pixel-perfect UIs, 
+              state management, and delivering high-quality solutions with a focus on 
+              performance and user experience.
             </p>
           </div>
 
@@ -45,7 +46,7 @@ export default function HomePage() {
 
           <div className={styles.links}>
             <a 
-              href="https://github.com/itsnitinr" 
+              href="https://github.com/Kunall7890" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.link}
@@ -56,10 +57,13 @@ export default function HomePage() {
             
             <span className={styles.linkSeparator}>/</span>
             
-            <Link href="/contact" className={styles.link}>
+            <a 
+              href="mailto:jaiswallkunal786@gmail.com" 
+              className={styles.link}
+            >
               <VscMail size={16} />
-              <span>Contact</span>
-            </Link>
+              <span>Email</span>
+            </a>
           </div>
         </div>
       </div>

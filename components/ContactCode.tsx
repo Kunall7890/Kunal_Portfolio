@@ -2,39 +2,24 @@ import styles from '@/styles/ContactCode.module.css';
 
 const contactItems = [
   {
-    social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
+    social: 'email',
+    link: 'jaiswallkunal786@gmail.com',
+    href: 'mailto:jaiswallkunal786@gmail.com',
   },
   {
-    social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    social: 'phone',
+    link: '+91 9119747693',
+    href: 'tel:+919119747693',
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'Kunall7890',
+    href: 'https://github.com/Kunall7890',
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
-  },
-  {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
-  },
-  {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
-  },
-  {
-    social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
+    link: 'kunaljaiswal7877',
+    href: 'https://www.linkedin.com/in/kunaljaiswal7877',
   },
 ];
 

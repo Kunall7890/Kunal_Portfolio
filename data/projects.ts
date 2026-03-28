@@ -8,35 +8,35 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Driwwwle',
+    title: 'Resumind AI Resume Analyzer',
     description:
-      'Discover creative websites and developers. A portal for you to share your projects.',
-    logo: '/logos/driwwwle.svg',
-    link: 'https://github.com/itsnitinr/driwwwle',
-    slug: 'driwwwle',
+      'An AI-powered resume analysis platform providing ATS scoring, job matching, and real-time feedback using Puter.js for cloud storage.',
+    logo: '/logos/resumind.svg',
+    link: 'https://github.com/Kunall7890/Resumind-AI',
+    slug: 'resumind-ai',
   },
   {
-    title: 'VSCode Portfolio',
+    title: 'Figma Clone - Collaborative Design Tool',
     description:
-      'A Visual Studio Code themed developer portfolio built with Next.js and CSS Modules.',
-    logo: '/logos/vsc.svg',
-    link: 'https://github.com/itsnitinr/vscode-portfolio',
-    slug: 'vscode-portfolio',
+      'A real-time collaborative design canvas with live multiplayer capabilities, shape creation, drawing tools, and Liveblocks integration.',
+    logo: '/logos/figma-clone.svg',
+    link: 'https://github.com/Kunall7890/figma-clone',
+    slug: 'figma-clone',
   },
   {
-    title: 'Subtrackt',
+    title: 'GSAP Cocktail Website',
     description:
-      'A simple and elegant way to track your subscriptions and save money.',
-    logo: '/logos/subtrackt.svg',
-    link: 'https://github.com/itsnitinr/subtrackt',
-    slug: 'subtrackt',
+      'An interactive, animation-rich cocktail website featuring scroll-driven animations, parallax effects, and custom animated carousel.',
+    logo: '/logos/gsap-cocktail.svg',
+    link: 'https://github.com/Kunall7890/gsap-cocktail',
+    slug: 'gsap-cocktail',
   },
   {
-    title: 'Coolify Deployments',
+    title: 'Bill Generator',
     description:
-      'VSCode extension to track and deploy your Coolify applications.',
-    logo: '/logos/coolify.svg',
-    link: 'https://github.com/itsnitinr/coolify-vscode-extension',
-    slug: 'coolify-vscode-extension',
+      'A custom bill generator web application for streamlining invoice creation with automated features and PDF export functionality.',
+    logo: '/logos/bill-generator.svg',
+    link: 'https://github.com/Kunall7890/bill-generator',
+    slug: 'bill-generator',
   },
 ];

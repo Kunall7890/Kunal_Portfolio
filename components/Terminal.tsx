@@ -53,10 +53,10 @@ const commands: Record<string, () => string[]> = {
   ],
   contact: () => [
     'Contact Information:',
-    '  Email:    hello@example.com',
-    '  GitHub:   github.com/itsnitinr',
-    '  Twitter:  @itsnitinr',
-    '  LinkedIn: linkedin.com/in/itsnitinr',
+    '  Email:    jaiswallkunal786@gmail.com',
+    '  GitHub:   github.com/Kunall7890',
+    '  LinkedIn: linkedin.com/in/kunaljaiswal7877',
+    '  Phone:    +91 9119747693',
   ],
   themes: () => [
     'Available themes:',

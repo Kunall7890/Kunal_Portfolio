@@ -13,18 +13,18 @@ const AboutPage = () => {
         <header className={styles.header}>
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
-              <h1 className={styles.name}>Nitin Ranganath</h1>
-              <p className={styles.role}>Software Engineer at Tessact</p>
+              <h1 className={styles.name}>Kunal Jaiswal</h1>
+              <p className={styles.role}>React Developer at NEXEM Technologies</p>
               <div className={styles.location}>
                 <span className={styles.dot} />
-                Mumbai, India
+                Dehradun, India
               </div>
             </div>
           </div>
           
           <div className={styles.headerActions}>
             <a 
-              href="https://github.com/itsnitinr" 
+              href="https://github.com/Kunall7890" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.iconButton}
@@ -47,15 +47,21 @@ const AboutPage = () => {
             
             <div className={styles.sectionBody}>
               <p className={styles.paragraph}>
-                I&apos;m a software engineer passionate about crafting beautiful, performant 
-                web experiences. I primarily work with the JavaScript/TypeScript ecosystem 
-                and React, building products that people love to use.
+                I&apos;m a React Developer and Full Stack Engineer passionate about building 
+                interactive, responsive web applications that users love. I specialize in modern 
+                JavaScript/TypeScript, React, and Next.js, creating pixel-perfect UIs with a focus 
+                on performance, scalability, and clean code architecture.
               </p>
               
               <p className={styles.paragraph}>
-                While I specialize in frontend development, I enjoy working across the 
-                stack with Node.js, MongoDB, and Express to bring full-stack applications 
-                to life.
+                With experience at NEXEM Technologies and working on collaborative platforms like 
+                Figma Clone with real-time synchronization, I&apos;m skilled in state management, 
+                RESTful APIs, and cross-browser compatibility. I believe in translating designs 
+                into production-ready code while maintaining best practices and high-quality standards.
+              </p>
+              
+              <p className={styles.paragraph}>
+                Bachelor of Technology in Computer Science from Graphic Era Hill University (2020-2024).
               </p>
             </div>
           </section>
@@ -70,27 +76,44 @@ const AboutPage = () => {
             <div className={styles.sectionBody}>
               <div className={styles.experienceCard}>
                 <div className={styles.expMeta}>
-                  <span className={styles.expPeriod}>Present</span>
+                  <span className={styles.expPeriod}>Feb 2025 – Dec 2025</span>
                 </div>
-                <h3 className={styles.expRole}>Software Engineer 2</h3>
-                <p className={styles.expCompany}>Tessact</p>
+                <h3 className={styles.expRole}>React Developer</h3>
+                <p className={styles.expCompany}>NEXEM Technologies (Remote)</p>
                 <ul className={styles.expList}>
-                  <li>Leading frontend development with a lean team of 4 engineers</li>
-                  <li>Building a next-gen video creation suite for professionals</li>
-                  <li>Implemented collaborative video reviewing and editing features</li>
-                  <li>Maintaining in-house component library, icon library and website</li>
+                  <li>Built interactive and responsive web applications using React.js, creating reusable component libraries that reduced development time by 30%</li>
+                  <li>Implemented state management solutions using React Hooks and Redux, integrated RESTful APIs for seamless data flow</li>
+                  <li>Optimized component rendering to improve application performance by 25%</li>
+                  <li>Translated Figma designs into pixel-perfect, production-ready code with cross-browser compatibility</li>
+                  <li>Collaborated with cross-functional teams using Git and Agile methodology, conducted code reviews to maintain high-quality standards</li>
                 </ul>
               </div>
 
               <div className={styles.experienceCard}>
                 <div className={styles.expMeta}>
-                  <span className={styles.expPeriod}>Freelance</span>
+                  <span className={styles.expPeriod}>July 2025 – Aug 2025</span>
                 </div>
-                <h3 className={styles.expRole}>Technical Writer</h3>
-                <p className={styles.expDesc}>
-                  Contributing to publications like <strong>100ms Blog</strong>, 
-                  <strong>LogRocket Blog</strong>, and <strong>DEV.to</strong>.
-                </p>
+                <h3 className={styles.expRole}>Freelance Web Developer</h3>
+                <p className={styles.expCompany}>Vardhaman Sports (Roorkee, India)</p>
+                <ul className={styles.expList}>
+                  <li>Developed a custom bill generator web application for streamlining invoice creation and management</li>
+                  <li>Implemented automated billing features with PDF export functionality for professional invoice generation</li>
+                  <li>Designed a responsive user interface ensuring seamless operation across desktop and mobile devices</li>
+                  <li>Collaborated directly with client stakeholders to gather requirements and deliver tailored solutions</li>
+                </ul>
+              </div>
+
+              <div className={styles.experienceCard}>
+                <div className={styles.expMeta}>
+                  <span className={styles.expPeriod}>2020 – Present</span>
+                </div>
+                <h3 className={styles.expRole}>Freelance Web Developer</h3>
+                <p className={styles.expCompany}>Live Demo | GitHub</p>
+                <ul className={styles.expList}>
+                  <li>Developed multiple production-ready web applications using React, Next.js, and Node.js</li>
+                  <li>Built AI-powered platforms, real-time collaborative tools, and animation-rich interactive websites</li>
+                  <li>Specialized in responsive design, performance optimization, and modern development practices</li>
+                </ul>
               </div>
             </div>
           </section>
@@ -109,16 +132,20 @@ const AboutPage = () => {
                   <div className={styles.skillTags}>
                     <span className={styles.skillTag}>JavaScript</span>
                     <span className={styles.skillTag}>TypeScript</span>
+                    <span className={styles.skillTag}>Python</span>
                     <span className={styles.skillTag}>HTML/CSS</span>
+                    <span className={styles.skillTag}>SQL</span>
                   </div>
                 </div>
                 
                 <div className={styles.skillCategory}>
                   <h4 className={styles.skillTitle}>Frontend</h4>
                   <div className={styles.skillTags}>
-                    <span className={styles.skillTag}>React</span>
+                    <span className={styles.skillTag}>React.js</span>
                     <span className={styles.skillTag}>Next.js</span>
                     <span className={styles.skillTag}>Tailwind CSS</span>
+                    <span className={styles.skillTag}>GSAP</span>
+                    <span className={styles.skillTag}>Fabric.js</span>
                   </div>
                 </div>
                 
@@ -126,17 +153,33 @@ const AboutPage = () => {
                   <h4 className={styles.skillTitle}>Backend</h4>
                   <div className={styles.skillTags}>
                     <span className={styles.skillTag}>Node.js</span>
-                    <span className={styles.skillTag}>Express</span>
-                    <span className={styles.skillTag}>MongoDB</span>
+                    <span className={styles.skillTag}>Express.js</span>
+                    <span className={styles.skillTag}>Flask</span>
+                    <span className={styles.skillTag}>FastAPI</span>
+                    <span className={styles.skillTag}>RESTful APIs</span>
                   </div>
                 </div>
                 
                 <div className={styles.skillCategory}>
-                  <h4 className={styles.skillTitle}>Tools</h4>
+                  <h4 className={styles.skillTitle}>Databases & Tools</h4>
                   <div className={styles.skillTags}>
+                    <span className={styles.skillTag}>MongoDB</span>
+                    <span className={styles.skillTag}>PostgreSQL</span>
                     <span className={styles.skillTag}>Git</span>
-                    <span className={styles.skillTag}>VS Code</span>
-                    <span className={styles.skillTag}>Figma</span>
+                    <span className={styles.skillTag}>GitHub</span>
+                    <span className={styles.skillTag}>Docker</span>
+                  </div>
+                </div>
+
+                <div className={styles.skillCategory}>
+                  <h4 className={styles.skillTitle}>Specialized Skills</h4>
+                  <div className={styles.skillTags}>
+                    <span className={styles.skillTag}>Real-time Collaboration</span>
+                    <span className={styles.skillTag}>WebSockets</span>
+                    <span className={styles.skillTag}>PDF Generation</span>
+                    <span className={styles.skillTag}>Performance Optimization</span>
+                    <span className={styles.skillTag}>AI Integration</span>
+                    <span className={styles.skillTag}>Responsive Design</span>
                   </div>
                 </div>
               </div>

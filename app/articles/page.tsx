@@ -67,7 +67,7 @@ export default async function ArticlesPage() {
           </div>
 
           <a 
-            href="https://dev.to/itsnitinr"
+            href="https://dev.to/kunall7890"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.profileLink}
