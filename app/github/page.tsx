@@ -15,8 +15,11 @@ export const metadata: Metadata = {
 export const revalidate = 600;
 
 async function getGithubData() {
+  const headers = process.env.GITHUB_API_KEY ? { Authorization: `token ${process.env.GITHUB_API_KEY}` } : {};
+
   const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
+    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+    { headers }
   );
   if (!userRes.ok) {
     throw new Error(`Failed to fetch user: ${userRes.status}`);
@@ -24,7 +27,8 @@ async function getGithubData() {
   const user: User = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
+    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`,
+    { headers }
   );
   if (!repoRes.ok) {
     throw new Error(`Failed to fetch repos: ${repoRes.status}`);
@@ -76,7 +80,7 @@ export default async function GithubPage() {
               <VscRepo size={20} />
             </div>
             <div className={styles.statInfo}>
-              <span className={styles.statValue}>{user.public_repos}</span>
+              <span className={styles.statValue}>{user.public_repos + (user.total_private_repos || 0)}</span>
               <span className={styles.statLabel}>Repositories</span>
             </div>
           </div>
