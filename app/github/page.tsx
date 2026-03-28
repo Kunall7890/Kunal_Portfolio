@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
-import { VscRepo, VscPerson, VscStarEmpty, VscRepoForked, VscLinkExternal, VscGithub } from 'react-icons/vsc';
+import { VscRepo, VscPerson, VscStarEmpty, VscRepoForked, VscLinkExternal, VscGithub, VscFile } from 'react-icons/vsc';
 
 import RepoCard from '@/components/RepoCard';
 import { Repo, User } from '@/types';
@@ -30,19 +30,24 @@ async function getGithubData() {
   const user: User = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`,
+    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=100`,
     { headers }
   );
   if (!repoRes.ok) {
     throw new Error(`Failed to fetch repos: ${repoRes.status}`);
   }
-  const repos: Repo[] = await repoRes.json();
+  const allRepos: Repo[] = await repoRes.json();
+  const repos = allRepos.slice(0, 6); // Display only first 6
 
-  return { user, repos };
+  // Calculate stats
+  const totalStars = allRepos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+  const totalForks = allRepos.reduce((acc, repo) => acc + repo.forks, 0);
+
+  return { user, repos, totalStars, totalForks };
 }
 
 export default async function GithubPage() {
-  const { user, repos } = await getGithubData();
+  const { user, repos, totalStars, totalForks } = await getGithubData();
 
   return (
     <div className={styles.page}>
@@ -104,7 +109,7 @@ export default async function GithubPage() {
             </div>
             <div className={styles.statInfo}>
               <span className={styles.statValue}>
-                {repos.reduce((acc, repo) => acc + repo.stargazers_count, 0)}
+                {totalStars}
               </span>
               <span className={styles.statLabel}>Total Stars</span>
             </div>
@@ -112,16 +117,23 @@ export default async function GithubPage() {
 
           <div className={styles.statCard}>
             <div className={styles.statIcon}>
-              <VscRepoForked size={20} />
+              <VscPerson size={20} />
             </div>
             <div className={styles.statInfo}>
-              <span className={styles.statValue}>
-                {repos.reduce((acc, repo) => acc + repo.forks, 0)}
-              </span>
-              <span className={styles.statLabel}>Total Forks</span>
+              <span className={styles.statValue}>{user.following || 0}</span>
+              <span className={styles.statLabel}>Following</span>
             </div>
           </div>
-        </div>
+
+          <div className={styles.statCard}>
+            <div className={styles.statIcon}>
+              <VscFile size={20} />
+            </div>
+            <div className={styles.statInfo}>
+              <span className={styles.statValue}>{user.public_gists || 0}</span>
+              <span className={styles.statLabel}>Gists</span>
+            </div>
+          </div>
 
         {/* Contribution Graph */}
         <section className={styles.section}>
