@@ -15,7 +15,10 @@ export const metadata: Metadata = {
 export const revalidate = 600;
 
 async function getGithubData() {
-  const headers = process.env.GITHUB_API_KEY ? { Authorization: `token ${process.env.GITHUB_API_KEY}` } : {};
+  const headers: Record<string, string> = {};
+  if (process.env.GITHUB_API_KEY) {
+    headers.Authorization = `token ${process.env.GITHUB_API_KEY}`;
+  }
 
   const userRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
