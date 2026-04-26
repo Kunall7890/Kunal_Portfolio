@@ -29,10 +29,10 @@ const commands: Record<string, () => string[]> = {
     '  echo      - Echo text (usage: echo <text>)',
   ],
   about: () => [
-    "Hi, I'm Nitin!",
-    'A passionate full-stack developer who loves building beautiful,',
-    'functional web applications. This portfolio is styled like VS Code',
-    'because I spend most of my time here anyway.',
+    "Hi, I'm Kunal!",
+    'A passionate full-stack developer who loves building innovative,',
+    'high-performance web applications and exploring new technologies.',
+    'This portfolio is styled like VS Code because it is where the magic happens.',
   ],
   skills: () => [
     'Technical Skills:',
