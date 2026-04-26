@@ -139,6 +139,23 @@ const Terminal = ({ onToggle }: TerminalProps) => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
+
+    const handleCustomCommand = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      const command = customEvent.detail;
+      const newLines = processCommand(command);
+      setLines(prev => [...prev, ...newLines]);
+      if (terminalRef.current) {
+        setTimeout(() => {
+          if (terminalRef.current) {
+            terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+          }
+        }, 10);
+      }
+    };
+
+    window.addEventListener('terminal-command', handleCustomCommand);
+    return () => window.removeEventListener('terminal-command', handleCustomCommand);
   }, []);
 
   useEffect(() => {

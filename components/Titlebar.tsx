@@ -6,9 +6,11 @@ import styles from '@/styles/Titlebar.module.css';
 
 interface TitlebarProps {
   onOpenCommandPalette?: () => void;
+  onToggleTerminal?: () => void;
+  onShowHelp?: () => void;
 }
 
-const Titlebar = ({ onOpenCommandPalette }: TitlebarProps) => {
+const Titlebar = ({ onOpenCommandPalette, onToggleTerminal, onShowHelp }: TitlebarProps) => {
   const handleViewClick = () => {
     if (onOpenCommandPalette) {
       onOpenCommandPalette();
@@ -30,8 +32,8 @@ const Titlebar = ({ onOpenCommandPalette }: TitlebarProps) => {
         <p onClick={handleViewClick} className={styles.menuItem} title="Open Command Palette (Ctrl+Shift+P)">View</p>
         <p>Go</p>
         <p>Run</p>
-        <p>Terminal</p>
-        <p>Help</p>
+        <p onClick={onToggleTerminal} className={styles.menuItem}>Terminal</p>
+        <p onClick={onShowHelp} className={styles.menuItem}>Help</p>
       </div>
       <p className={styles.title}>Kunal - Visual Studio Code</p>
       <div className={styles.windowButtons}>

@@ -36,6 +36,15 @@ const Layout = ({ children }: LayoutProps) => {
     setIsCommandPaletteOpen(false);
   }, []);
 
+  const handleShowHelp = useCallback(() => {
+    if (!isTerminalOpen) {
+      setIsTerminalOpen(true);
+    }
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('terminal-command', { detail: 'help' }));
+    }, 100);
+  }, [isTerminalOpen]);
+
   useEffect(() => {
     const main = document.getElementById('main-editor');
     if (main) {
@@ -103,7 +112,11 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className={styles.layout}>
-      <Titlebar onOpenCommandPalette={openCommandPalette} />
+      <Titlebar
+        onOpenCommandPalette={openCommandPalette}
+        onToggleTerminal={toggleTerminal}
+        onShowHelp={handleShowHelp}
+      />
       <div className={styles.main}>
         <Sidebar />
         <Explorer />
