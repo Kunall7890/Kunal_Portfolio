@@ -134,6 +134,7 @@ export default async function GithubPage() {
               <span className={styles.statLabel}>Gists</span>
             </div>
           </div>
+        </div>
 
         {/* Contribution Graph */}
         <section className={styles.section}>
