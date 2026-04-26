@@ -14,13 +14,9 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 async function getArticles(): Promise<Article[]> {
+  const username = process.env.NEXT_PUBLIC_DEVTO_USERNAME || 'kunall7890';
   const res = await fetch(
-    'https://dev.to/api/articles/me/published?per_page=6',
-    {
-      headers: {
-        'api-key': process.env.DEV_TO_API_KEY!,
-      },
-    }
+    `https://dev.to/api/articles?username=${username}&per_page=6`
   );
 
   if (!res.ok) {

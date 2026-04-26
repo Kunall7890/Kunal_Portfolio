@@ -20,8 +20,10 @@ async function getGithubData() {
     headers.Authorization = `token ${process.env.GITHUB_API_KEY}`;
   }
 
+  const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'Kunall7890';
+
   const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+    `https://api.github.com/users/${username}`,
     { headers }
   );
   if (!userRes.ok) {
@@ -30,7 +32,7 @@ async function getGithubData() {
   const user: User = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=100`,
+    `https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`,
     { headers }
   );
   if (!repoRes.ok) {
@@ -141,7 +143,7 @@ export default async function GithubPage() {
           <h2 className={styles.sectionTitle}>Contribution Activity</h2>
           <div className={styles.contributions}>
             <GitHubCalendar
-              username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+              username={process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'Kunall7890'}
               hideColorLegend
               hideMonthLabels
               colorScheme="dark"
