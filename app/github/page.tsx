@@ -22,19 +22,37 @@ async function getGithubData() {
 
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'Kunall7890';
 
-  const userRes = await fetch(
+  // Try authenticated request first (if token provided). If token is invalid (401),
+  // retry unauthenticated so builds won't fail due to an invalid/misconfigured token.
+  let userRes = await fetch(
     `https://api.github.com/users/${username}`,
     { headers }
   );
+
+  if (userRes.status === 401 && headers.Authorization) {
+    // Invalid token — retry without Authorization header
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    userRes = await fetch(`https://api.github.com/users/${username}`);
+  }
+
   if (!userRes.ok) {
     throw new Error(`Failed to fetch user: ${userRes.status}`);
   }
   const user: User = await userRes.json();
 
-  const repoRes = await fetch(
+  let repoRes = await fetch(
     `https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`,
     { headers }
   );
+
+  if (repoRes.status === 401 && headers.Authorization) {
+    // Retry repos without Authorization header
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    repoRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=100`);
+  }
+
   if (!repoRes.ok) {
     throw new Error(`Failed to fetch repos: ${repoRes.status}`);
   }
