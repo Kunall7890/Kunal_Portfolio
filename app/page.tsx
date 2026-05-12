@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { VscArrowRight, VscGithub, VscMail, VscCode } from 'react-icons/vsc';
+import { SiLeetcode } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 
 import styles from '@/styles/HomePage.module.css';
 
@@ -45,24 +47,45 @@ export default function HomePage() {
           </div>
 
           <div className={styles.links}>
-            <a 
-              href="https://github.com/Kunall7890" 
-              target="_blank" 
+            <a
+              href="https://github.com/Kunall7890"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
             >
               <VscGithub size={16} />
               <span>GitHub</span>
             </a>
-            
+
             <span className={styles.linkSeparator}>/</span>
-            
-            <a 
-              href="mailto:jaiswallkunal786@gmail.com" 
-              className={styles.link}
-            >
+
+            <a href="mailto:jaiswallkunal786@gmail.com" className={styles.link}>
               <VscMail size={16} />
               <span>Email</span>
+            </a>
+
+            <span className={styles.linkSeparator}>/</span>
+
+            <a
+              href="https://www.linkedin.com/in/kunaljaiswal7877"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <FaLinkedin size={16} />
+              <span>LinkedIn</span>
+            </a>
+
+            <span className={styles.linkSeparator}>/</span>
+
+            <a
+              href="https://leetcode.com/u/Kunal7895/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <SiLeetcode size={16} />
+              <span>LeetCode</span>
             </a>
           </div>
         </div>

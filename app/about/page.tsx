@@ -1,6 +1,8 @@
 'use client';
 
 import { VscGithub, VscMail, VscLinkExternal } from 'react-icons/vsc';
+import { SiLeetcode } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
 
 import styles from '@/styles/AboutPage.module.css';
@@ -23,17 +25,36 @@ const AboutPage = () => {
           </div>
           
           <div className={styles.headerActions}>
-            <a 
-              href="https://github.com/Kunall7890" 
-              target="_blank" 
+            <a
+              href="https://github.com/Kunall7890"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.iconButton}
             >
               <VscGithub size={20} />
             </a>
+
             <Link href="/contact" className={styles.iconButton}>
               <VscMail size={20} />
             </Link>
+
+            <a
+              href="https://www.linkedin.com/in/kunaljaiswal7877"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconButton}
+            >
+              <FaLinkedin size={20} />
+            </a>
+
+            <a
+              href="https://leetcode.com/u/Kunal7895/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconButton}
+            >
+              <SiLeetcode size={20} />
+            </a>
           </div>
         </header>
 
