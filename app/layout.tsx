@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import '@/styles/themes.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kunal-portfolio-ahjx.vercel.app'),
   title: {
     default: 'Kunal | Portfolio',
     template: 'Kunal | %s',
@@ -23,11 +24,15 @@ export const metadata: Metadata = {
     title: "Kunal's Portfolio",
     description:
       "A full-stack developer building websites that you'd like to use.",
-    images: ['https://imgur.com/4zi5KkQ.png'],
-    url: 'https://vscode-portfolio.vercel.app',
+    images: ['/portfolio-preview.png'],
+    url: 'https://kunal-portfolio-ahjx.vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
+    title: "Kunal's Portfolio",
+    description:
+      "A full-stack developer building websites that you'd like to use.",
+    images: ['/portfolio-preview.png'],
   },
 };
 
