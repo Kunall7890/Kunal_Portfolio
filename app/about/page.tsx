@@ -16,7 +16,7 @@ const AboutPage = () => {
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
               <h1 className={styles.name}>Kunal Jaiswal</h1>
-              <p className={styles.role}>React Developer at NEXEM Technologies</p>
+              <p className={styles.role}>Full Stack Software Engineer & Open Source Contributor</p>
               <div className={styles.location}>
                 <span className={styles.dot} />
                 Dehradun, India
@@ -136,6 +136,64 @@ const AboutPage = () => {
                   <li>Specialized in responsive design, performance optimization, and modern development practices</li>
                 </ul>
               </div>
+
+              {/* ── Open Source Contributions ── */}
+              <div className={styles.experienceCard}>
+                <div className={styles.expMeta}>
+                  <span className={styles.expPeriod}>2025 – Present</span>
+                </div>
+                <h3 className={styles.expRole}>Open Source Contributor</h3>
+                <p className={styles.expCompany}>
+                  <a
+                    href="https://github.com/Kunall7890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.expCompanyLink}
+                  >
+                    github.com/Kunall7890
+                    <VscLinkExternal size={12} style={{ marginLeft: 4, verticalAlign: 'middle' }} />
+                  </a>
+                </p>
+                <ul className={styles.expList}>
+                  <li>
+                    <strong>freeCodeCamp</strong> — Merged documentation PR improving developer
+                    onboarding guides; contributed to one of the largest open source codebases
+                    on GitHub.
+                  </li>
+                  <li>
+                    <strong>Activepieces</strong> — Fixed a UI bug in{' '}
+                    <code>flow-actions-menu.tsx</code> where the Versions menu item incorrectly
+                    disappeared on run pages; surgically targeted conditional rendering logic
+                    in the YC-backed automation platform.
+                  </li>
+                  <li>
+                    <strong>Twenty CRM</strong> — Implemented an expansion of the Phones
+                    composite field type to support phone type and extension sub-fields, spanning
+                    shared TypeScript types, NestJS backend resolvers, Zod validation schemas,
+                    and React form components.
+                  </li>
+                  <li>
+                    <strong>hoainho/react-debugger-extension</strong> — Multiple merged PRs:
+                    added Continue.dev MCP configuration docs, extracted magic-number{' '}
+                    <code>setTimeout</code> values into named constants across five files,
+                    implemented WAI-ARIA Tabs pattern with roving <code>tabIndex</code> and
+                    full keyboard navigation, and added a{' '}
+                    <code>prefers-reduced-motion</code> CSS accessibility guard.
+                  </li>
+                  <li>
+                    <strong>UTDNebula/key-provision-bot</strong> — Added Discord.js runtime
+                    command reloading, enabling hot-reload of slash commands without bot
+                    restarts.
+                  </li>
+                  <li>
+                    <strong>sandstorm-io/sandstorm</strong> — Fixed a camelCase naming typo in
+                    the core codebase; navigated maintainer feedback on branch targeting and
+                    contribution policy.
+                  </li>
+                </ul>
+              </div>
+              {/* ── End Open Source Contributions ── */}
+
             </div>
           </section>
 
